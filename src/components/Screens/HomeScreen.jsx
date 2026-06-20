@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ConfirmModal from '../Common/ConfirmModal';
+import ConfirmModal from '../common/ConfirmModal';
 import logo from '../../assets/logo.png';
 
 const HomeScreen = ({ onStartTest }) => {
