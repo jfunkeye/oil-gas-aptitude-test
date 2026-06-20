@@ -4,7 +4,7 @@ import Footer from '../Layout/Footer';
 import ScoreCard from '../Results/ScoreCard';
 import PerformanceLevel from '../Results/PerformanceLevel';
 import WrongAnswersReview from '../Results/WrongAnswersReview';
-import ConfirmModal from '../Common/ConfirmModal';
+import ConfirmModal from '../common/ConfirmModal';
 
 const ResultsScreen = ({ questions, answers, timeLeft, onRetake, onHome }) => {
   const [showRetakeModal, setShowRetakeModal] = useState(false);
