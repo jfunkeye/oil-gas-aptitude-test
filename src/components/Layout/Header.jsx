@@ -15,43 +15,47 @@ const Header = ({ timeLeft, answeredCount, totalQuestions, showTimer = true }) =
   };
 
   return (
-    <header className="app-header">
+    <header className="app-header" style={{ padding: '4px 0', minHeight: '48px' }}>
       <div className="test-container">
-        <div className="d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <div className="d-flex align-items-center justify-content-between flex-wrap gap-2">
           {/* Brand with Logo */}
-          <a href="#" className="header-brand" onClick={(e) => e.preventDefault()}>
-  <div className="header-brand-icon" style={{ 
-    width: '50px', 
-    height: '50px', 
-    background: 'transparent',
-    padding: '4px'
-  }}>
-    <img 
-      src={logo} 
-      alt="Logo" 
-      style={{ 
-        width: '100px', 
-        height: '130px', 
-        objectFit: 'contain',
-        display: 'block'
-      }} 
-    />
-  </div>
-</a>
+          <a 
+            href="#" 
+            className="header-brand" 
+            onClick={(e) => e.preventDefault()}
+            style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '6px',
+              textDecoration: 'none'
+            }}
+          >
+            <img 
+              src={logo} 
+              alt="Logo" 
+              style={{ 
+                width: '100px', 
+                height: '60px', 
+                objectFit: 'contain',
+                display: 'block'
+              }} 
+            />
+   
+          </a>
 
           {/* Stats */}
           {showTimer && (
-            <div className="header-stats">
+            <div className="header-stats" style={{ gap: '12px' }}>
               <div className="stat-item">
-                <div className="stat-label">Time Left</div>
-                <div className={`stat-value ${getTimeStatus()}`}>
+                <div className="stat-label" style={{ fontSize: '0.5rem' }}>Time</div>
+                <div className={`stat-value ${getTimeStatus()}`} style={{ fontSize: '0.8rem' }}>
                   <i className="bi bi-clock me-1"></i>
                   {formatTime(timeLeft)}
                 </div>
               </div>
               <div className="stat-item d-none d-sm-block">
-                <div className="stat-label">Progress</div>
-                <div className="stat-value">
+                <div className="stat-label" style={{ fontSize: '0.5rem' }}>Progress</div>
+                <div className="stat-value" style={{ fontSize: '0.8rem' }}>
                   {answeredCount}/{totalQuestions}
                 </div>
               </div>
