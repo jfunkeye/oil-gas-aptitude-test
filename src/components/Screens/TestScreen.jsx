@@ -3,9 +3,9 @@ import Header from '../Layout/Header';
 import Footer from '../Layout/Footer';
 import QuestionCard from '../Test/QuestionCard';
 import QuestionNavigator from '../Test/QuestionNavigator';
-import SubmitConfirmModal from '../Common/SubmitConfirmModal';
-import TimeUpModal from '../Common/TimeUpModal';
-import LeaveConfirmModal from '../Common/LeaveConfirmModal';
+import SubmitConfirmModal from '../common/SubmitConfirmModal';
+import TimeUpModal from '../common/TimeUpModal';
+import LeaveConfirmModal from '../common/LeaveConfirmModal';
 
 const TestScreen = ({ questions, onTestComplete }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
